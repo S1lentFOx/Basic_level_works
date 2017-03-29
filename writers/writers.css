@@ -1,0 +1,169 @@
+body {
+	background: url(http://wscatalog.ru/sites/default/files/img/photo/91923518.jpg);
+	margin: 0px;
+}
+
+header {
+	background: url(Старые-книги-Макро.jpg);
+	background-size: cover;
+	border: 5px solid black;
+	border-radius: 10% 10% 0% 0%;
+}
+
+header > h1 {
+	color: #FFFFFF;
+	text-align: center;
+	font-size 40px;
+	margin: 50px auto;
+	padding: 50px;
+	text-shadow: 5px 5px 5px black;
+}
+
+blockquote {
+
+	font-style: italic;
+	text-align: right;
+	padding: 10px 25px;
+	margin: 0px;
+	border-top: 2px dashed black;
+	background: #B09566;
+	box-shadow: 3px -3px 10px rgba(65,34,3,1);
+}
+
+
+.container_left,
+.container_right{
+	padding: 5%;
+	margin-bottom: 15%;
+	overflow: hidden; /* Не совсем понимаю как это рабготает. Однако, картинка с значением float:left, ранее не воспринимавшаяся контейнером как дочерний элемент (не влияя на высоту контейнера, позволяя ему "захватить себя"), теперь является дочерним элементом */
+}
+
+.photo {
+	border: 5px black solid;
+	border-radius: 5px;
+	max-width: 300px;
+	height: 300px;
+	background: white;
+	overflow: hidden;
+}
+
+
+.text_inner {
+	text-indent: 50px;
+}
+
+a {
+	text-indent: 0px;
+	text-align: center;
+}
+
+
+@media all and (min-width: 800px){
+
+	.container_right > .photo{
+		margin: 2% 0% 2% 2%;
+		float: right;
+	}
+
+	.container_left > .photo {
+		margin: 2% 2% 2% 0%;	
+		float: left;
+	}
+}
+
+@media all and (min-width: 450px){
+	.container_left,
+	.container_right{
+		display: block;
+
+	}
+	.photo {
+		background: yellow;
+		margin: 0  auto 25px auto;
+		display: inherit;
+	}
+
+	label {
+		display: none;
+	}
+
+		.wrapper {
+		 display: flex;
+		}
+
+		.containers {
+			flex: 4;
+		}
+		.road {
+			flex: 1;
+			max-width: 128px;
+			margin-left:0;
+			border: 5px solid rgba(25,25,25,0.6);
+
+			box-shadow: 0px 5px 20px black;
+			background: url(books.jpg);
+		}
+
+
+}
+
+
+@media all and (max-width: 450px){
+	.photo {
+		background: yellow;
+		margin: 0  auto 0px auto;
+		width: auto;
+		display: none;
+	}
+
+	#slide1 {
+		attr(checked, true)
+	}
+}
+
+
+/*=================  Кнопка отображения фотографии  ==========================*/
+
+input {
+	display: none;
+}
+
+label {
+/*	height: 10px;
+	width: 30px;*/
+	background-color: white;
+	border: 3px solid black;
+	border-radius: 10px;
+	margin: auto 5px ;
+	cursor: pointer;
+	text-align: center;
+	padding: 5px;
+	box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+	transition: background-color 1s;
+}
+
+label:hover {
+	box-shadow: 0px 5px 20px rgba(0,0,0,1);	
+	background-color: #FEC365;
+}
+
+#open-1:checked ~ .photo, 
+#open-2:checked ~ .photo, 
+#open-3:checked ~ .photo, 
+#open-4:checked ~ .photo{
+	display: inherit;
+}
+
+#close-1:checked ~ .photo,
+#close-2:checked ~ .photo,
+#close-3:checked ~ .photo,
+#close-4:checked ~ .photo{
+	display: none;
+}
+
+.choose_board {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 20px;
+}
