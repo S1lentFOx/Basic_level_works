@@ -112,6 +112,7 @@ a {
 /*@media all and (min-width: 450px) - значение 651 используется для проверки с планшета*/
 @media all and (max-width: 651px){
 	.photo {
+		display: flex;
 		background: yellow;
 		margin: 0  auto 0px auto;
 		display: none;
