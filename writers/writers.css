@@ -72,8 +72,8 @@ a {
 	}
 }
 
-/*@media all and (min-width: 450px) - значение 601 используется для проверки с планшета*/
-@media all and (min-width: 601px){
+/*@media all and (min-width: 450px) - значение 651 используется для проверки с планшета*/
+@media all and (min-width: 651px){
 	.container_left,
 	.container_right{
 		display: block;
@@ -109,7 +109,8 @@ a {
 
 }
 
-@media all and (max-width: 450px){
+/*@media all and (min-width: 450px) - значение 651 используется для проверки с планшета*/
+@media all and (max-width: 651px){
 	.photo {
 		background: yellow;
 		margin: 0  auto 0px auto;
