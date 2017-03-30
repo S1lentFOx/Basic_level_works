@@ -108,8 +108,8 @@ a {
 
 }
 
-
-@media all and (max-width: 450px){
+/*@media all and (max-width: 450px) - значение 601 используется для проверки с планшета*/
+@media all and (max-width: 601px){
 	.photo {
 		background: yellow;
 		margin: 0  auto 0px auto;
