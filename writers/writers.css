@@ -126,6 +126,21 @@ a {
 	#slide1 {
 		attr(checked, true);
 	}
+	
+	
+	#open-1:checked ~ .photo, 
+	#open-2:checked ~ .photo, 
+	#open-3:checked ~ .photo, 
+	#open-4:checked ~ .photo{
+		display: inherit;
+	}
+
+	#close-1:checked ~ .photo,
+	#close-2:checked ~ .photo,
+	#close-3:checked ~ .photo,
+	#close-4:checked ~ .photo{
+		display: none;
+}
 }
 
 
@@ -154,19 +169,6 @@ label:hover {
 	background-color: #FEC365;
 }
 
-#open-1:checked ~ .photo, 
-#open-2:checked ~ .photo, 
-#open-3:checked ~ .photo, 
-#open-4:checked ~ .photo{
-	display: inherit;
-}
-
-#close-1:checked ~ .photo,
-#close-2:checked ~ .photo,
-#close-3:checked ~ .photo,
-#close-4:checked ~ .photo{
-	display: none;
-}
 
 .choose_board {
 	display: flex;
