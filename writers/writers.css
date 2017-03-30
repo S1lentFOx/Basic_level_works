@@ -53,26 +53,33 @@ blockquote {
 	font-size: 1em;
 }
 
+
+p {
+	border: 1px solid black;
+	overflow: hidden;
+	padding: 25px;
+	margin: 0px;
+}
+
 a {
 	text-indent: 0px;
 	text-align: center;
 }
 
 
-@media all and (min-width: 900px){
+@media all and (min-width: 850px){
 
 	.container_right > .photo{
-		margin: 2% 0% 2% 2%;
+		margin: 0% 0% 0% 2%;
 		float: right;
 	}
 
 	.container_left > .photo {
-		margin: 2% 2% 2% 0%;	
+		margin: 0% 2% 0% 0%;	
 		float: left;
 	}
 }
 
-/*@media all and (min-width: 450px) - значение 651 используется для проверки с планшета*/
 @media all and (min-width: 651px){
 	.container_left,
 	.container_right{
@@ -82,7 +89,7 @@ a {
 	.photo {
 		background: yellow;
 		margin: 0  auto 25px auto;
-		display: inherit;
+		display: flex;
 	}
 
 	label {
@@ -94,22 +101,22 @@ a {
 		}
 
 		.containers {
-			flex: 4;
+			flex: 8;
 		}
 		.road {
 			flex: 1;
-			max-width: 128px;
+/*			max-width: 128px;*/
 			margin-left:0;
 			border: 5px solid rgba(25,25,25,0.6);
-
 			box-shadow: 0px 5px 20px black;
 			background: url(books.jpg);
+			background-position: left;
 		}
 
 
 }
 
-/*@media all and (min-width: 450px) - значение 651 используется для проверки с планшета*/
+
 @media all and (max-width: 651px){
 	.photo {
 		display: flex;
@@ -119,7 +126,7 @@ a {
 	}
 
 	#slide1 {
-		attr(checked, true)
+		attr(checked, true);
 	}
 }
 
