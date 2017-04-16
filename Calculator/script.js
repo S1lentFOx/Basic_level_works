@@ -82,7 +82,7 @@ var lastSelectedNumField = 1;
 
 	window.onkeypress = function(){
 		which = window.event.which;
-		console.log(which);
+		// console.log(which);
 		if(which == 13){
 			operate();
 		}
@@ -97,11 +97,7 @@ var lastSelectedNumField = 1;
 			focusNext();
 		}
 
-		// m = minus = substract
-		// p = plus = add
-		// o = multiply
-		// l = divide
-
+//Math operation change
 		if(which == 112){
 				add();
 		}
@@ -124,23 +120,52 @@ function operate(){
 	var first_num_input_value = +document.querySelector("#first_num").value;
 	var second_num_input_value = +document.querySelector("#second_num").value;
 	var operation_input_value = document.querySelector("#operation").value;
+	var operation_for_php = 0;
 
 	if(operation_input_value == "+"){
 		document.querySelector("#result").value = first_num_input_value + second_num_input_value;
+			operation_for_php = "add";
 	}
 	if(operation_input_value == "-"){
 		document.querySelector("#result").value = first_num_input_value - second_num_input_value;
+			operation_for_php = "sub";
 	}
 	if(operation_input_value == "/"){
 		document.querySelector("#result").value = first_num_input_value / second_num_input_value;
+			operation_for_php = "div";
 	}
 	if(operation_input_value == "*"){
 		document.querySelector("#result").value = first_num_input_value * second_num_input_value;
+			operation_for_php = "mult";
 	}
 
+	answer = document.querySelector("#result").value;
 
+	var parametrs = 'first_num=' + first_num_input_value + '&' + 'second_num=' + second_num_input_value + '&' + 'operation=' + operation_for_php + '&' + 'answer=' + answer;
+	archivation(parametrs);
 }
 
+
+function archivation(parametrs){
+
+	var request = new XMLHttpRequest();
+
+		request.onreadystatechange = function(){
+		if(request.readyState == 4 && request.status == 200) {
+			console.log(request.responseText);
+		}
+	}
+
+	request.open("POST","archivator.php");
+	request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	request.send(parametrs);
+}
+
+
+
+
+
+//Select operation
 function substract(){
 	document.querySelector("#operation").value = "-";
 }
