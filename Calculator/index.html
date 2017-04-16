@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+</head>
+<body>
+	
+	<div class="calculator">
+		<header>
+			<h1>Master Calculator</h1>
+		</header>
+
+		<main>
+			<div class="row">
+				<input type="button" class="single" id="tips" value="?">
+				<input type="button" class="single" id="clear_last" value="<-">
+				<input type="button" class="single" id="clean" value="C">
+				<input type="button" class="single" id="reverse" value="+-">
+			</div>
+			<div class="row">
+				<input type="button" class="single" id="one" value="1">
+				<input type="button" class="single" id="two" value="2">
+				<input type="button" class="single" id="three" value="3">
+				<input type="button" class="single" id="divide" value="/">
+			</div>
+			<div class="row">
+				<input type="button" class="single" id="four" value="4">
+				<input type="button" class="single" id="five" value="5">
+				<input type="button" class="single" id="six" value="6">
+				<input type="button" class="single" id="multiply" value="*">
+			</div>
+			<div class="row">
+				<input type="button" class="single" id="seven" value="7">
+				<input type="button" class="single" id="eight" value="8">
+				<input type="button" class="single" id="nine" value="9">
+				<input type="button" class="single" id="add" value="+">
+			</div>
+			<div class="row">
+				<input type="button" class="double" id="zero" value="0">
+				<input type="button" class="single" id="float" value=".">
+				<input type="button" class="single" id="sub" value="-">
+			</div>
+			<div class="row">
+				<input type="button" class="single" id="first" value="I">
+				<input type="button" class="single" id="second" value="II">
+				<input type="button" class="double" id="operate" value="=">
+			</div>
+		</main>	
+
+		<div class="textfield"><div class="row">
+				<p>First number: </p>
+				<input type="number" id="first_num" placeholder="0" autofocus>
+			</div>
+			<div class="row">
+				<p>Second numb: </p>
+				<input type="number" id="second_num" placeholder="0">
+			</div>
+			<div class="row" id="tip_row">
+				<p> Operation: </p>
+				<input type="text" id="operation" value="+" readonly>
+				<div id="operation_tip"></div>
+			</div>
+			<div class="row">
+				<p>Result: </p>
+				<input type="number" id="result" value="" readonly>
+			</div>
+			
+		</div>	
+	</div>
+
+<div class="tips_menu"><input type="button" id="close_tips" value="Скрыть">
+	<h2>Инструкция по использованию калькулятора</h2>
+	<ul>
+		<h3>Использование клавиатуры.</h3>
+		<li>Нажмите enter для проведения операции над числами.</li>
+		<li>Нажмите w для перемещения на первое поле ввода цифр</li>
+		<li>Нажмите s для перемещения на второе поле ввода цифр</li>
+		<li>Нажмите d или a для перемещения между полями.</li>
+		<h3>Информация о кнопках</h3>
+		<li>Нажмите С чтобы очистить все поля (кроме операции).</li>
+		<li>Нажмите +- чтобы инвертировать цифру в выбранном поле.</li>
+		<li>Нажмите римскую I или II чтобы перейти на соотвутствующее поле ввода цифр.</li>
+		<li>Нажмите <- чтобы стереть последнюю цифру из поля для ввода.</li>
+
+
+	</ul>
+</div>
+
+</body>
+</html>
